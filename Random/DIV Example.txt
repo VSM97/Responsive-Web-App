@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.myDiv1 {
+  border: 5px outset red;
+  background-color: lightblue;    
+  text-align: center;
+}
+
+.myDiv1 {
+  border: 5px outset red;
+  background-color: lightblue;    
+  text-align: center;
+}
+
+.myDiv2 {
+  border: 10px outset green;
+  background-color: lightblue;    
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1>The div element</h1>
+
+<div class="myDiv1">
+  <h2>This is a heading in a div element</h2>
+  <p>This is some text in a div element.</p>
+</div>
+'<div class="myDiv2">
+<p>This is some text outside the div element.</p>
+</div>
+
+</body>
+</html>

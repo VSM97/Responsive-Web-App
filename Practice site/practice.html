@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>VSM</title>
+    <style>
+        #blue {
+            color: blue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+        .violet {
+            color:blueviolet;
+        }
+        .date {
+            border: 5px outset red;
+            border-style: double;
+            background-color: rgb(197, 236, 19);
+        }
+        .greet {
+            border: 10px outset red;
+            background-color: teal;
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"> </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+
+    <body>
+        <h1 class="violet">First Website</h1>
+        <img src="images\download.jfif" style="width: 200px;">
+        <h2 id="blue">Lorem ipsum</h2>
+
+        <!---- How to write a comment on HTML--->
+        <div class="date" >
+            <!-- Button to display date and time-->
+            <button type="button"
+            onclick="DateFunction()">Date and Time</button>
+            <p id='date'></p>
+        </div>
+
+        <div class="greet">
+            <!--Button to display greeting on click-->
+            <button type="button"
+            onclick="Greeting()">Enter</button>
+            <p id="hello"></p>
+        </div>
+
+
+        <!--Turn ON/OFF Light bulb with JS-->
+        <p style="color: black;">Try to change the img src from off to on using JS</p>
+        <button onclick="TurnOnBulb()">Turn on the light</button>
+        <img id="bulb" src="images/pic_bulboff.gif" style="width: 100px;">
+        <button onclick="TurnOffBulb()">Turn off the light</button>
+
+        <!--Change element style using JS-->
+        <p id='change_style'>This section I'll check how to change element style with JS</p>
+        <button onclick="document.getElementById('change_style').style.fontSize='50px' ">Change style</button>
+        <button onclick="document.getElementById('change_style').style.fontSize='' ">Restore style</button>
+
+
+        <p style="color: darkblue;">lorem ipsum lorem ipsum </p>
+        <br><br>
+        <a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">Learn HTML</a>
+        <br><br>
+        <a href="https://www.w3schools.com/css/css_intro.asp" target="_blank">Learn CSS</a>
+        <br><br>
+        <a href="https://www.w3schools.com/js/" target="_blank">Learn JS</a>
+    </body>
+</html>

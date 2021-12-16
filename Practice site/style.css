@@ -1,0 +1,15 @@
+body{
+    background-color: wheat;
+    text-align: center;
+}
+h1{
+    color: black;
+}
+h2{
+    color: black;
+}
+p{
+    color: crimson;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
