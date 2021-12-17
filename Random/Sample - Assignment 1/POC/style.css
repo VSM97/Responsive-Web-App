@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;  /* To delete original gap on the edge */
+    width: 100%;
+}
+header {
+    height: 70px;
+    text-align: center;
+    background: #eeeeee;
+  }
+a:link, a:visited {
+    color: #E87EA1;
+    text-decoration: none;
+    
+}
+a:hover {
+    color: rgb(177, 101, 138)
+}
+.header_left {
+    font-size: 30px;
+    padding: 17.5px 30px;
+    float: left;
+}
+.header_right {
+    margin-top: 15px;
+    font-size: 20px;
+    padding: 0px 30px;
+    position: relative;
+    bottom: 5px;
+    float: right;
+}
+.header_button {
+    padding: 0 20px;
+}
+#profile_img {
+    height: 45px;
+    width: 45px;
+    border: 1px solid lightgray;
+    border-radius: 24px;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+.search_people {
+    background-color: #DEE2EC;
+    height: 300px;
+    width: 60%;
+    padding: 0 20%;
+    border: 5px solid lightgray;
+    display: table;
+}
+.search_left {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(61, 61, 61);
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+.droplist {
+    height: 30px;
+    width: px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: rgb(77, 77, 77);
+    border: none;
+    border-radius: 5px;
+}
+#native_check {
+    position: relative;
+    bottom: 7px;
+    height: 15px;
+    width: 15px;
+}
+#native_check_label {
+    position: relative;
+    bottom: 7px;
+    font-size: 17px;
+    font-weight: normal;
+}
+.search_right {
+    width: 600px;
+    display: table-cell;
+}
+.date{
+    display: flex;
+    list-style: none;
+}
+.date_button {
+    width: 25px;
+    height: 35px;
+    padding: 10px 7px;
+    border-radius: 8px;
+    border: 2px solid lightgray;
+    margin: 0 1px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+.date_and_time {
+    display: flex;
+}
+.time_set {
+    display: flex;
+}
+.time_select {
+    height: 25px;
+    position: relative;
+    top: 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    color: rgb(77, 77, 77);
+    border: none;
+    border-radius: 3px;
+}
+#range_sign {
+    font-size: 20px;
+}
+#ava_check {
+    height: 15px;
+    width: 15px;
+    margin-left: 10px;
+    position: relative;
+    bottom: 7px;
+}
+#ava_check_label {
+    position: relative;
+    bottom: 7px;
+    color: rgb(61, 61, 61);
+}
+.age {
+    margin: 10px 0px 15px 50px; 
+    color: rgb(61, 61, 61);
+}
+.learning_level {
+    margin: 10px 0px 15px 50px; 
+    color: rgb(61, 61, 61);
+}
+.search_box {
+    margin-top: 25px;
+    margin-left: 50px;
+    background-color: white;
+    width: 300px;
+    height: 31px;
+    border-radius: 8px;
+}
+#free_search {
+    width: 255px;
+    height: 25px;
+    position: relative;
+    bottom: 4px;
+    border-color: white;
+    border-style: none;
+    outline: none;
+}
+.age_input {
+    width: 116px;
+    margin-left: 10px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 4px;
+}
+.level_input {
+    width: 120px;
+    margin-left: 10px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 4px;
+}
+#age_label {
+    padding-right: 96px;
+    font-weight: 600;
+}
+#level_label {
+    padding-right: 18.5px;
+    font-weight: 600;
+}
+#search_people_button {
+    font-size: 24px;
+    padding: 15px 25px;
+    color: white;
+    background-color: indianred;
+    border: none;
+    border-radius: 7px;
+    margin: 10px 0 10px 400px;
+}
+
+
+.search_result {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 0 10px 0 80px;
+}
+.profile_card {
+    width: 160px;
+}
+.profile_img {
+    border: 2px solid rgb(194, 115, 141);
+    padding-bottom: 130px;
+}
+.profile_info {
+    background-color: rgb(238, 238, 238);
+    margin-top: -18px;
+}
+
+
+footer {
+    background-color:#eeeeee;
+    width: 100%;
+    padding-bottom: 25px;
+    margin-top: 100px;
+}
+.contact {
+    text-align: center;
+}
+
+/* To show the icon and number, I used table as a solution.
+   In icon statement I've already used class to call the icon 
+   so I used id instead. */
+/* To centerise the table, I'm using margin. */
+.call {
+    display: table;
+    margin: 0 auto;
+    width: 14%;
+}
+#phone {
+    display: table-cell;
+}
+.phone_num {
+    display: table-cell;
+}
+.logo_foot {
+    font-size: 24px;
+    padding-left: 20px;
+}
+.copyright {
+    float: right;
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+
+
+/* To avoid collapse. But this is not the best way and 
+   must be modify later*/
+@media only screen and (max-width: 500px) {
+    .search_people {
+        height: 600px;
+        margin: 0 5%;
+    }
+}

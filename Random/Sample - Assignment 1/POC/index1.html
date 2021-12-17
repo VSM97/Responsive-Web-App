@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Home</title>
+</head>
+<body>
+<div id="vue-app"> 
+    <!--header-->
+    <header class="header">
+        <!-- left part of the header -->
+        <div class="header_left">
+        <!-- webpage logo-->
+        <a  class="logo" href="index.html">
+            <img src="Logo.png" alt="logo" width="180">
+        </a>
+        </div>
+        <!-- right part of the header -->
+        <div class="header_right">
+            <a href="#" id="schedule" class="header_button">Schedule</a>
+            <a href="#" id="message" class="header_button">Message</a>    
+            <a href="#" id="log_out" class="header_button">Log out</a>
+            <img src="ptofile.jpg" alt="Account icon" id="profile_img">
+            <a href="#">LOVELY</a>
+        </div>
+    </header>
+
+
+    <!-- Search function part -->
+    <h1 style="align-self: start; padding-left: 40px; font-size: 50px;">Find partners</h1>
+    <!-- search box -->
+    <div class="search_people">
+        <!-- left part of the search box -->
+        <div class="search_left">
+            <!-- first droplist "Speaks" -->
+            <label for="speak">Speaks</label>
+            <select name="speak" id="speak" class="droplist">
+                <!-- choices in the droplist -->
+                <option value="Chinese">Chinese</option>
+                <option value="English">English</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+                <option value="Italian">Italian</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Korean">Korean</option>
+            </select>
+            <div> <!-- checkbox, to show only native speakers -->
+                <input type="checkbox" name="native" id="native_check">
+                <label for="native_check" id="native_check_label">Native</label>
+            </div>
+            <!-- second droplist "Learning" -->
+            <label for="learning">Learning</label>
+            <select name="learning" id="learning" class="droplist">
+                <!-- choices in the droplist -->
+                <option value="Chinese">Chinese</option>
+                <option value="English">English</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+                <option value="Italian">Italian</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Korean">Korean</option>
+            </select>
+            <!-- third droplist "Country" -->
+            <label for="country">Country</label>
+            <select name="country" id="country" class="droplist">
+                <!-- choices in the droplist -->
+                <option value="Australia">Australia</option>
+                <option value="China">China</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="Italy">Italy</option>
+                <option value="Japan">Japan</option>
+                <option value="Korea">Korea</option>
+                <option value="United States">United States</option>
+                <option value="United Kingdom">United Kingdom</option>
+            </select>
+            <!-- fourth droplist "Gender" -->
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender" class="droplist">
+                <!-- choices in the droplist -->
+                <option value="All">All</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            </div>
+        </div>
+        <!-- right part of the search box -->
+        <div class="search_right">
+            <div class="date_and_time">
+                <!-- date choose buttons-->
+                <ul class="date">
+                    <li class="date_button">
+                        <a href="#" id="2020-07-24">
+                            <span>24</span><br>Fri
+                        </a>
+                    </li>
+                    <li class="date_button">
+                        <a href="#" id="2020-07-25">
+                            <span>25</span><br>Sat
+                        </a>
+                    </li>
+                    <li class="date_button">
+                        <a href="#" id="2020-07-26">
+                            <span>26</span><br>Sun
+                        </a>
+                    </li>
+                    <li class="date_button">
+                        <a href="#" id="2020-07-27">
+                            <span>27</span><br>Mon
+                        </a>
+                    </li>
+                    <li class="date_button">
+                        <a href="#" id="2020-07-28">
+                            <span>28</span><br>Tue
+                        </a>
+                    </li>
+                    <li class="date_button">
+                        <a href="#" id="2020-07-29">
+                            <span>29</span><br>Wed
+                        </a>
+                    </li>
+                    <li class="date_button">
+                        <a href="#" id="2020-07-30">
+                            <span>30</span><br>Thu
+                        </a>
+                    </li>
+                </ul>
+                <!-- time range choose -->
+                <div class="time">
+                    <div class="time_set">
+                        <select name="time_from" id="start_time" class="time_select">
+                                <option value="02:00">02:00</option>
+                                <option value="02:30">02:30</option>
+                                <option value="03:00">03:00</option>
+                                <option value="03:30">03:30</option>
+                                <option value="04:00">04:00</option>
+                                <option value="04:30">04:30</option>
+                                <option value="05:00">05:00</option>
+                                <option value="05:30">05:30</option>
+                                <option value="06:00">06:00</option>
+                                <option value="06:30">06:30</option>
+                                <option value="07:00">07:00</option>
+                                <option value="07:30">07:30</option>
+                                <option value="08:00">08:00</option>
+                                <option value="08:30">08:30</option>
+                                <option value="09:00">09:00</option>
+                                <option value="09:30">09:30</option>
+                                <option value="10:00">10:00</option>
+                                <option value="10:30">10:30</option>
+                                <option value="11:00">11:00</option>
+                                <option value="11:30">11:30</option>
+                                <option value="12:00">12:00</option>
+                                <option value="12:30">12:30</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:30">15:30</option>
+                                <option value="16:00">16:00</option>
+                                <option value="16:30">16:30</option>
+                                <option value="17:00">17:00</option>
+                                <option value="17:30">17:30</option>
+                                <option value="18:00">18:00</option>
+                                <option value="18:30">18:30</option>
+                                <option value="19:00">19:00</option>
+                                <option value="19:30">19:30</option>
+                                <option value="20:00">20:00</option>
+                                <option value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                                <option value="21:30">21:30</option>
+                                <option value="22:00">22:00</option>
+                                <option value="22:30">22:30</option>
+                                <option value="23:00">23:00</option>
+                                <option value="23:30">23:30</option>
+                                <option value="24:00">24:00</option>
+                                <option value="24:30">24:30</option>
+                                <option value="25:00">25:00</option>
+                                <option value="25:30">25:30</option>
+                        </select>
+                        <p id="range_sign">~</p>
+                        <select name="time_to" id="end_time" class="time_select">
+                                <option value="02:00">02:00</option>
+                                <option value="02:30">02:30</option>
+                                <option value="03:00">03:00</option>
+                                <option value="03:30">03:30</option>
+                                <option value="04:00">04:00</option>
+                                <option value="04:30">04:30</option>
+                                <option value="05:00">05:00</option>
+                                <option value="05:30">05:30</option>
+                                <option value="06:00">06:00</option>
+                                <option value="06:30">06:30</option>
+                                <option value="07:00">07:00</option>
+                                <option value="07:30">07:30</option>
+                                <option value="08:00">08:00</option>
+                                <option value="08:30">08:30</option>
+                                <option value="09:00">09:00</option>
+                                <option value="09:30">09:30</option>
+                                <option value="10:00">10:00</option>
+                                <option value="10:30">10:30</option>
+                                <option value="11:00">11:00</option>
+                                <option value="11:30">11:30</option>
+                                <option value="12:00">12:00</option>
+                                <option value="12:30">12:30</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:30">15:30</option>
+                                <option value="16:00">16:00</option>
+                                <option value="16:30">16:30</option>
+                                <option value="17:00">17:00</option>
+                                <option value="17:30">17:30</option>
+                                <option value="18:00">18:00</option>
+                                <option value="18:30">18:30</option>
+                                <option value="19:00">19:00</option>
+                                <option value="19:30">19:30</option>
+                                <option value="20:00">20:00</option>
+                                <option value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                                <option value="21:30">21:30</option>
+                                <option value="22:00">22:00</option>
+                                <option value="22:30">22:30</option>
+                                <option value="23:00">23:00</option>
+                                <option value="23:30">23:30</option>
+                                <option value="24:00">24:00</option>
+                                <option value="24:30">24:30</option>
+                                <option value="25:00">25:00</option>
+                                <option value="25:30">25:30</option>       
+                        </select>
+                    </div>
+                    <!-- checkbox to apply user's available time -->
+                    <input type="checkbox" name="My available time" id="ava_check">
+                    <label for="ava_check" id="ava_check_label">My available time</label>
+                </div>
+            </div>  
+            <!-- age range choose -->      
+            <div class="age">
+                <label for="age_input_from" id="age_label">Age</label>
+                From<input type="number" id="age_input_from" class="age_input">
+                To<input type="number" id="age_input_to" class="age_input">
+            </div>
+            <!-- level range choose -->
+            <div class="learning_level">
+                <label for="age_input_from" id="level_label">Learning level</label>
+                From<select name="level_from" id="level_from" class="level_input">
+                    <option value="begin">Beginner</option>
+                    <option value="pre-int">Pre intermediate</option>
+                    <option value="int">Intermediate</option>
+                    <option value="upper-int">Upper intermediate</option>
+                    <option value="adv">Advanced</option>
+                    <option value="pro">Proficiency</option>
+                </select>
+                To<select name="level_to" id="level_to" class="level_input">
+                    <option value="begin">Beginner</option>
+                    <option value="pre-int">Pre intermediate</option>
+                    <option value="int">Intermediate</option>
+                    <option value="upper-int">Upper intermediate</option>
+                    <option value="adv">Advanced</option>
+                    <option value="pro">Proficiency</option>
+                </select>
+            </div>
+            <!-- free word search box-->
+            <div class="search_box">
+                <i class="material-icons">search</i>
+                <input type="text" id="free_search" placeholder="Free word search…">
+            </div>
+            <button type="submit" id="search_people_button">Search</button>
+        </div>
+    </div>
+
+
+    <!-- search result part -->
+    <h3>search result will be shown here</h3>
+    <!-- *the way to show the list is a bit different from my proposal
+         user will be able to choose both type of list* -->
+    <div class="search_result">
+        <div class="profile_card">
+            <h3 class="profile_img">profile image here</h3>
+            <p class="profile_info"><b>Here, profile information will be shown.</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, quas?</p>
+        </div>
+        <div class="profile_card">
+            <h3 class="profile_img">profile image here</h3>
+            <p class="profile_info"><b>Here, profile information will be shown.</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, quas?</p>
+        </div>
+        <div class="profile_card">
+            <h3 class="profile_img">profile image here</h3>
+            <p class="profile_info"><b>Here, profile information will be shown.</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, quas?</p>
+        </div>
+        <div class="profile_card">
+            <h3 class="profile_img">profile image here</h3>
+            <p class="profile_info"><b>Here, profile information will be shown.</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, quas?</p>
+        </div>
+        <div class="profile_card">
+            <h3 class="profile_img">profile image here</h3>
+            <p class="profile_info"><b>Here, profile information will be shown.</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, quas?</p>
+        </div>
+        <div class="profile_card">
+            <h3 class="profile_img">profile image here</h3>
+            <p class="profile_info"><b>Here, profile information will be shown.</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, quas?</p>
+        </div>
+        <div class="profile_card">
+            <h3 class="profile_img">profile image here</h3>
+            <p class="profile_info"><b>Here, profile information will be shown.</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, quas?</p>
+        </div>
+        <div class="profile_card">
+            <h3 class="profile_img">profile image here</h3>
+            <p class="profile_info"><b>Here, profile information will be shown.</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, quas?</p>
+        </div>
+        <div class="profile_card">
+            <h3 class="profile_img">profile image here</h3>
+            <p class="profile_info"><b>Here, profile information will be shown.</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, quas?</p>
+        </div>
+        <div class="profile_card">
+            <h3 class="profile_img">profile image here</h3>
+            <p class="profile_info"><b>Here, profile information will be shown.</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, quas?</p>
+        </div>
+        <div class="profile_card">
+            <h3 class="profile_img">profile image here</h3>
+            <p class="profile_info"><b>Here, profile information will be shown.</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, quas?</p>
+        </div>
+        <div class="profile_card">
+            <h3 class="profile_img">profile image here</h3>
+            <p class="profile_info"><b>Here, profile information will be shown.</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, quas?</p>
+        </div>
+        <div class="profile_card">
+            <h3 class="profile_img">profile image here</h3>
+            <p class="profile_info"><b>Here, profile information will be shown.</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, quas?</p>
+        </div>
+        <div class="profile_card">
+            <h3 class="profile_img">profile image here</h3>
+            <p class="profile_info"><b>Here, profile information will be shown.</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, quas?</p>
+        </div>
+        <div class="profile_card">
+            <h3 class="profile_img">profile image here</h3>
+            <p class="profile_info"><b>Here, profile information will be shown.</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, quas?</p>
+        </div>
+    </div>
+
+    
+    <!-- footer part -->
+    <footer>
+        <!-- company's address and phone number here -->
+        <div class="contact">
+            <div class="address">
+            <p>123 HELLO STREET</p>
+            <p>GOGO CITY, VICTORIA</p>
+            </div>
+            <div class="call">
+            <i class="material-icons" id="phone">call</i>
+            <p class="phone_num">1234 5678</p>
+            </div>
+            <!-- will go to contact page -->
+            <a href="#">Contact form</a>
+        </div>
+        <hr>
+        <a class="logo_foot" v-bind:href="homepage">Title Logo</a>
+        <p class="copyright">2020. Design by Ryo Sakata</p>
+    </footer> 
+</div>   
+</body>
+</html>
