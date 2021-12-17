@@ -33,6 +33,15 @@ body{
     padding: 40%;
 }
 
+.profile_text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-bottom: 20px;
+    border-bottom: 5px solid black;
+}
+
 .container .right_side{
     position: relative;
     background: rgb(28, 184, 150);
