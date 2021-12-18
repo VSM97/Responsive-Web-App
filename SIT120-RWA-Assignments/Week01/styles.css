@@ -12,7 +12,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 10vh;
 }
 
 .container{
@@ -30,7 +30,7 @@ body{
 .container .left_side{
     position: relative;
     background: violet;
-    padding: 40%;
+    padding: 1%;
 }
 
 .profile_text{
@@ -46,12 +46,12 @@ body{
     position: relative;
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    border-radius: 30%;
     overflow: hidden;
 }
 
 .profile_text .imagebox img{
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -59,8 +59,28 @@ body{
     object-fit: fill;
 }
 
+.contact_info{
+    padding-top: 10%;
+}
+
+.title{
+    color: rgb(58, 4, 4);
+    text-transform: uppercase;
+}
+
+.contact_info ul{
+    position: relative;
+}
+
+.contact_info ul li{
+    position: relative;
+    list-style: none;
+}
+
+
+
 .container .right_side{
     position: relative;
     background: rgb(28, 184, 150);
-    padding: 40%;
+    padding: 10%;
 }
