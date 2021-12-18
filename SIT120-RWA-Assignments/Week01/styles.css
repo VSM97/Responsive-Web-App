@@ -30,7 +30,7 @@ body{
 .container .left_side{
     position: relative;
     background: violet;
-    padding: 1%;
+    padding: 10%;
 }
 
 .profile_text{
@@ -65,7 +65,7 @@ body{
 }
 
 .title{
-    color: rgb(58, 4, 4);
+    color: rgb(0, 0, 0);
     text-transform: uppercase;
 }
 
@@ -149,4 +149,31 @@ body{
     position: relative;
     background: rgb(28, 184, 150);
     padding: 10%;
+}
+
+.about{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.about .box .company{
+    min-width: 100px;
+}
+
+.about .box h4{
+    text-transform: uppercase;
+}
+
+.about .box h5{
+    text-transform: uppercase;
+}
+
+.about .box .text{
+    font-weight: 400;
 }
