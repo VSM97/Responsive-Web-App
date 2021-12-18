@@ -77,8 +77,9 @@ body{
     list-style: none;
     margin: 10px 0;
     cursor: pointer;
+    text-transform: uppercase;
+    text-size-adjust: small;
 }
-
 
 .contact_info ul li .icon{
     display: inline-block;
@@ -90,6 +91,33 @@ body{
     color: black;
     font-weight: 650;
 }
+
+.education{
+    padding-top: 10%;
+}
+
+.education ul{
+    position: relative;
+}
+
+.education ul li{
+    position: relative;
+    list-style: none;
+    margin-bottom: 15px;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.education ul li h4{
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+.education ul li h5{
+    text-transform: uppercase;
+}
+
+
 
 .container .right_side{
     position: relative;
