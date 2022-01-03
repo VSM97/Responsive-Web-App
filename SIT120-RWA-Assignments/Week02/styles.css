@@ -7,37 +7,98 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 body{
     position: relative;
     background-color: cornflowerblue;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: auto;
+
 }
+
 
 .container{
     position: relative;
     margin: 1%;
     min-width: 1280px;
     min-height: 720px;
-    background: blueviolet;
+    background: rgb(63, 33, 233);
+    box-shadow: 0 35px 55px rgb(63, 78, 105);
+    display: grid;
 }
+
 
 .head{
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    background-image: url('img/header.jpg');
+    background-size: cover;
 
 }
 
-.left_pane{
 
+.left_pane{
+    position: absolute;
+    left: 0%;
+    top: 100px;
+    background: rgb(4, 112, 236);
+    text-align: left;
+    width: 260px;
+    height: 620px;
 }
 
 
 .middle_pane{
+    position: absolute;
+    background: rgb(40, 130, 233);
+    text-align: center;
+    width: 530px;
+    height: 621px;
+    left: 260px;
+    top: 100px;
 
 }
+
+.products-list {
+    width: 10vw;
+    height: 10vh;
+    padding-top: 10px;
+    display: flex;
+  }
+
+.products {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(2,2fr);
+
+  }
+
+.products img {
+    position: relative;
+    width: 265px;
+  }
+
+.addTocart{
+    background-color: rgb(24, 245, 226);
+}
+
 
 .right_pane{
-
+    position: absolute;
+    background: rgb(4, 112, 236);
+    width: 496px;
+    height: 620px;
+    left: 784px;
+    top: 100px;
+    right: 0;
+    text-align: center;
 }
+
