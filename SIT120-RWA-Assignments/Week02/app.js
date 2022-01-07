@@ -25,7 +25,8 @@ function renderProdcuts(){
 renderProdcuts();
 
 //Declare Cart
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("CART")) || [];
+updateCart();
 
 //addToCart Function
 function addToCart(id){
@@ -48,6 +49,9 @@ function addToCart(id){
 function updateCart(){
     renderCartItems();
     renderSubTotal();
+
+    //save cart to local storage using stringify
+    localStorage.setItem("CART", JSON.stringify(cart));
 }
 
 //calculate and render subtotal
@@ -69,7 +73,7 @@ function renderCartItems(){
     cart.forEach( (item) => {
         cartElements.innerHTML += `
             <div class="cart-item">
-                <div class="item-info">
+                <div class="item-info" onclick="removeItemFromCart(${item.id})">
                     <img src="${item.imgSrc}" alt="${item.name}">
                     <h4>${item.name}</h4>
                 </div>
@@ -85,6 +89,14 @@ function renderCartItems(){
             `;
 
         });
+}
+
+//remove item from cart
+function removeItemFromCart(id){
+    cart = cart.filter( (item) => item.id !== id);
+
+
+    updateCart();
 }
 
 //change numberOfUnits of an item
