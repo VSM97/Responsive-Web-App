@@ -1,6 +1,7 @@
 //Selecting Elements
 const productElements = document.querySelector(" .products");
 const cartElements = document.querySelector(" .cart-items");
+const subtotalElements = document.querySelector(" .subtotal");
 
 //Rendering productcs
 function renderProdcuts(){
@@ -49,6 +50,19 @@ function updateCart(){
     renderSubTotal();
 }
 
+//calculate and render subtotal
+function renderSubTotal(){
+    let totalPrice = 0,
+        totalItems = 0;
+
+    cart.forEach( (item) => {
+        totalPrice += item.price * item.numberOfUnits;
+        totalItems += item.numberOfUnits;
+    });
+
+    subtotalElements.innerHTML = `Subtotal (${totalItems} items): $${totalPrice}`
+}
+
 //Render cart items
 function renderCartItems(){
     cartElements.innerHTML = ""; //clear cart elements
@@ -63,9 +77,9 @@ function renderCartItems(){
                     <small>$</small>${item.price}
                 </div>
                 <div class="units">
-                    <button onclick="changeNumberOfUnits('minus',${item.id})"><div class="btn minus">-</div></button>
+                    <button onclick="changenumberOfUnits('minus',${item.id})"><div class="btn minus">-</div></button>
                     <div class="number">${item.numberOfUnits}</div>
-                    <button onclick="changeNumberOfUnits('plus', ${item.id})"><div class="btn plus">+</div></button>
+                    <button onclick="changenumberOfUnits('plus', ${item.id})"><div class="btn plus">+</div></button>
                 </div>
             </div>
             `;
@@ -74,18 +88,26 @@ function renderCartItems(){
 }
 
 //change numberOfUnits of an item
-function changeNumberOfUnits(action, id){
+function changenumberOfUnits(action, id){
     cart = cart.map( (item) => {
 
-        let oldNumberOfUnits = item.numberOfUnits;
+        let numberOfUnits = item.numberOfUnits;
 
         if(item.id === id){
-            oldNumberOfUnits--
-        }else if(action === "plus"){
-            oldNumberOfUnits++;
+            if(action === "minus" && numberOfUnits > 1){
+                numberOfUnits--;
+            }else if(action === "plus" && numberOfUnits < item.instock){
+                numberOfUnits++;
+            }
+
         }
 
 
-        return item;
-    })
+        return {
+            ...item,
+            numberOfUnits,
+        };
+    });
+
+    updateCart();
 }
